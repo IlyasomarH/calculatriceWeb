@@ -14,15 +14,16 @@ let egale= document.querySelector('div.egale')
 
 for(let i=0; i<nombres.length; i++){
     nombres[i].addEventListener('click', (e)=>{
-        if (champ1.value==''){
-              champ1.value= nombres[i].textContent
+        if (champ2.value==''){
+              champ1.value+= nombres[i].textContent
             
-        }else if (champ3.value==''){
-            champ3.value=nombres[i].textContent
-        }else{
-            champ1.value= nombres[i].textContent
-            champ3.value=''
-            
+        }else if (champ2.value!='' & resultat.value==''){
+            champ3.value+=nombres[i].textContent
+        }else if (resultat.value!=''){
+            champ1.value=nombres[i].textContent
+            champ2.value=''
+            champ3.value=""
+            resultat.value=""
         }
 
         e.stopPropagation()
