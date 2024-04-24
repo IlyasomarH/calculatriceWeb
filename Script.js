@@ -8,7 +8,7 @@ let champ2=document.querySelector('div.container> div.ecran >div.calcul > input:
 let champ3=document.querySelector('div.container> div.ecran >div.calcul > input:last-child')
 let resultat= document.querySelector('div.container> div.ecran >div.resultat > input')
 
-
+let effacer= document.querySelector('div.last > button')
 let egale= document.querySelector('div.egale')
 
 
@@ -17,8 +17,12 @@ for(let i=0; i<nombres.length; i++){
         if (champ1.value==''){
               champ1.value= nombres[i].textContent
             
-        }else{
+        }else if (champ3.value==''){
             champ3.value=nombres[i].textContent
+        }else{
+            champ1.value= nombres[i].textContent
+            champ3.value=''
+            
         }
 
         e.stopPropagation()
@@ -48,9 +52,22 @@ egale.addEventListener('click', ()=>{
     }
     else if(champ3.value!=0){
         resultat.value="= "+((Number(champ1.value)/Number(champ3.value)))
+    }else{
+        
+       resultat.value="Math ereur"
+
+       resultat.style.color="red"
     }
     
 })
+
+
+
+effacer.addEventListener('click', ()=>{
+    location.reload()
+})
+
+
 
 // nombres.forEach((valeurCourante)=>{
 //     valeurCourante.addEventListener('click', (e)=>{
