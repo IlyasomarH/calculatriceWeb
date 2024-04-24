@@ -40,18 +40,22 @@ div.container> div.ecran >div.calcul{
     justify-content: space-around;
     width: 50%;
     margin: 10px;
-    /* border: 1px solid black; */
+    
     height: 10vh;
+    font-size: 2em;
 }
 div.container> div.ecran >div.resultat > input{
     width: 100%;
     height: 6vh;
     text-align: end;
+    font-size: 1.5em;
+    
 }
 div.container> div.ecran >div.calcul > input{
     /* border: 1px solid black; */
     width: 100%;
     margin: 10px;
+    font-size: 1.5em;
 }
 
 
